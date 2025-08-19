@@ -7,7 +7,7 @@ interface AccuracyGaugeProps {
 
 const R = 48;
 const CIRC = 2 * Math.PI * R;
-
+const newValue = 3 * 100;
 const AccuracyGauge = ({ value, label }: AccuracyGaugeProps) => {
   const clamped = Math.max(0, Math.min(100, value));
   const offset = useMemo(() => CIRC - (clamped / 100) * CIRC, [clamped]);
